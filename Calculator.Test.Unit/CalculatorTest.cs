@@ -101,5 +101,27 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Power(-2, -3), Is.EqualTo(-0.125));
 
         }
+
+        [Test]
+
+        public void Divide2Numbers_ReturnSumOfNumbersDivided()
+        {
+            //Act
+            uut.Divide(2, 1);
+
+            //Assert
+            Assert.That(uut.Divide(2, 1), Is.EqualTo(2));
+        }
+
+        [Test]
+
+        public void StoreLastNumberInAccumulator_ReturnSumOfLastNumberInAccumulator()
+        {
+            Assert.That(uut.Divide(2, 1), Is.EqualTo(2));
+            Assert.That(uut.Accumulator, Is.EqualTo(2));
+        }
+
+
+
     }
 }
