@@ -10,13 +10,25 @@ namespace LabExerc1
     {
         double Add(double a, double b);
 
+        double Add(double a);
+
         double Subtract(double a, double b);
+
+        double Subtract(double a);
 
         double Multiply(double a, double b);
 
+        double Multiply(double a);
+
         double Power(double a, double b);
 
+        double Power(double a);
+
         double Divide(double dividend, double divisor);
+
+        double Divide(double dividend);
+
+        void Clear();
 
     }
 }

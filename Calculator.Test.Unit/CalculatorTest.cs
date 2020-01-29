@@ -121,7 +121,59 @@ namespace Calculator.Test.Unit
             Assert.That(uut.Accumulator, Is.EqualTo(2));
         }
 
+        [Test]
 
+        public void ClearAccumulator_ReturnAccumulatorIsSetToZero()
+        {
+            Assert.That(uut.Divide(2, 1), Is.EqualTo(2));
+            uut.Clear();
+            Assert.That(uut.Accumulator, Is.EqualTo(0));
+        }
+
+        [Test]
+
+        public void AddToAccumulator_ReturnSumOfNumberAddedToAccumulator()
+        {
+            uut.Clear();
+            Assert.That(uut.Add(5), Is.EqualTo(5));
+            Assert.That(uut.Add(5), Is.EqualTo(10));
+        }
+
+        [Test]
+
+        public void SubtractFromAccumulator_ReturnSumOfNumberSubtractedFromAccumulator()
+        {
+            uut.Clear();
+            Assert.That(uut.Subtract(5), Is.EqualTo(-5));
+            Assert.That(uut.Subtract(5), Is.EqualTo(-10));
+        }
+
+        [Test]
+
+        public void MultiplyWithAccumulator_ReturnSumOfNumberMultipliedWithAccumulator()
+        {
+            uut.Clear();
+            Assert.That(uut.Add(5), Is.EqualTo(5));
+            Assert.That(uut.Multiply(5), Is.EqualTo(25));
+        }
+
+        [Test]
+
+        public void DivideWithAccumulator_ReturnSumOfNumberDividedWithAccumulator()
+        {
+            uut.Clear();
+            Assert.That(uut.Add(5), Is.EqualTo(5));
+            Assert.That(uut.Divide(5), Is.EqualTo(1));
+        }
+
+        [Test]
+
+        public void PowerWithAccumulator_ReturnSumOfNumberPoweredWithAccumulator()
+        {
+            uut.Clear();
+            Assert.That(uut.Add(5), Is.EqualTo(5));
+            Assert.That(uut.Power(3), Is.EqualTo(125));
+        }
 
     }
 }
